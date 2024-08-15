@@ -1,0 +1,154 @@
+/* Button Base Styles */
+.qualification_forms {
+    margin-top: 5rem;
+    background: linear-gradient(to left, #ffffff27, #38742765);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: -1px 4px 28px 0px rgb(0 0 0 / 86%);
+    width: 70%;
+    max-width: 100%;
+    height: auto;
+    min-height: 400px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .qualification_forms {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .qualification_forms .button-group {
+        flex-direction: column;
+    }
+
+    .qualification_forms .btn {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-left: 0px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .qualification_forms {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+
+    .qualification_forms .btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Button Base Styles */
+.qualification_forms .btn {
+    background: linear-gradient(45deg, #007bff, #00d2ff);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    position: relative;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+/* Active Button Background and Arrow */
+.qualification_forms .active-btn {
+    background: linear-gradient(45deg, #28a745, #a7ff83);
+    color: white;
+}
+
+.qualification_forms .active-btn::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+    border-top-color: #28a745;
+    transition: all 0.5s ease;
+}
+
+/* Hover Effects */
+.qualification_forms .btn:hover {
+    background: linear-gradient(45deg, #0062cc, #00aaff);
+    transform: scale(1.05);
+}
+
+/* Smooth Background Translation for the Button Group */
+.qualification_forms .button-group {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.qualification_forms .button-group::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(45deg, #28a745, #a7ff83);
+    transition: all 0.5s ease;
+    left: 0;
+}
+
+/* Collapsible Section Transitions */
+.qualification_forms .collapse-container {
+    transition: max-height 0.5s ease-in-out;
+}
+
+.qualification_forms .collapse-container h2 {
+    color: rgba(255, 255, 255, 0.724);
+    font-family: "Poppins";
+    font-weight: 800;
+    text-align: center;
+    background: transparent;
+}
+
+/* Skill Form Styling */
+.skill_form label {
+    color: white;
+    font-weight: bold;
+    font-family: "Poppins";
+}
+
+.skill_form label span {
+    color: rgb(240, 17, 17);
+}
+
+.skill_form input {
+    font-family: "Poppins";
+}
+
+/* Additional Media Query for Small Screens */
+@media (max-width: 576px) {
+    .qualification_forms .collapse-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .qualification_forms .btn {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .qualification_forms {
+        width: 80%;
+        margin-top: 4rem;
+    }
+
+    .qualification_forms .btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .qualification_forms .collapse-container h2 {
+        font-size: 1.8rem;
+    }
+}
