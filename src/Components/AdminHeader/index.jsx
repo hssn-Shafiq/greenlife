@@ -38,7 +38,7 @@ const AdminHeader = () => {
       <nav id="navbar">
         <div className="nav-wrapper d-flex align-items-center justify-content-between h-100 w-100">
           <div className="logo">
-            <a href="#home">
+            <a href="/admin-dashboard">
               <i className="fas fa-chess-knight" /> Logo
             </a>
           </div>

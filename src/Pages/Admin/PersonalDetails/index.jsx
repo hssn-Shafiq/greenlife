@@ -125,8 +125,8 @@ const PersonalDetails = () => {
                 <table className="table table-striped">
                   <thead>
                     <tr className="text-center">
-                      <th>Interest</th>
-                      <th>Skill</th>
+                      <th>Area</th>
+                      <th>Birth</th>
                       <th>Actions</th>
                     </tr>
                   </thead>

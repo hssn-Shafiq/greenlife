@@ -38,7 +38,7 @@ const Header = () => {
       <nav id="navbar">
         <div className="nav-wrapper d-flex align-items-center justify-content-between h-100">
           <div className="logo">
-            <a href="#home">
+            <a href="/home">
               <i className="fas fa-chess-knight" /> Logo
             </a>
           </div>
