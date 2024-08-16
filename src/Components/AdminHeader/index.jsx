@@ -43,7 +43,7 @@ const AdminHeader = () => {
             </a>
           </div>
           <ul id="menu" className={menuOpen ? "show" : ""}>
-          <li><a href="/admin-dashboard">Go to Dashboard</a></li>
+          <li><a href="/admin-dashboard">Dashboard</a></li>
           <li><a href="/admin-user-details">Registered Users</a></li>
           <li><a href="/admin-academic-details">Academic</a></li>
           <li><a href="/admin-curriculum-details">Curriculum</a></li>
@@ -82,7 +82,11 @@ const AdminHeader = () => {
       </div>
       <div className={`overlay-menu ${menuOpen ? "open" : ""}`}>
         <ul>
-          <li><a href="#contact">Go to Dashboard</a></li>
+        <li><a href="/admin-dashboard">Dashboard</a></li>
+          <li><a href="/admin-user-details">Registered Users</a></li>
+          <li><a href="/admin-academic-details">Academic</a></li>
+          <li><a href="/admin-curriculum-details">Curriculum</a></li>
+          <li><a href="/admin-personal-details">Personal</a></li>
         </ul>
       </div>
     </>
