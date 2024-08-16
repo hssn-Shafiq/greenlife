@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../firebase";
 
-const Header = () => {
+const AdminHeader = () => {
   const [user, setUser] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -36,30 +36,30 @@ const Header = () => {
   return (
     <>
       <nav id="navbar">
-        <div className="nav-wrapper d-flex align-items-center justify-content-between h-100">
+        <div className="nav-wrapper d-flex align-items-center justify-content-between h-100 w-100">
           <div className="logo">
             <a href="#home">
               <i className="fas fa-chess-knight" /> Logo
             </a>
           </div>
           <ul id="menu" className={menuOpen ? "show" : ""}>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <li><a href="/admin-dashboard">Go to Dashboard</a></li>
+          <li><a href="/admin-user-details">Registered Users</a></li>
+          <li><a href="/admin-academic-details">Academic</a></li>
+          <li><a href="/admin-curriculum-details">Curriculum</a></li>
+          <li><a href="/admin-personal-details">Personal</a></li>
             {user ? (
               <li className="nav-item dropdown">
                 <a
-                  className="nav-link dropdown-toggle bg-dark p-2 text-light"
+                  className="nav-link dropdown-toggle bg-dark p-2 text-light rounded-2 shadow"
                   href="#"
                   id="userDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                >
-                  
+                >                 
                     <i className="fa-solid fa-user"></i> {getUsername(user.email)}
-        
+
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="userDropdown">
                   <li>
@@ -80,17 +80,13 @@ const Header = () => {
         <span className="icon icon-bars" />
         <span className="icon icon-bars overlay" />
       </div>
-
       <div className={`overlay-menu ${menuOpen ? "open" : ""}`}>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">Go to Dashboard</a></li>
         </ul>
       </div>
     </>
   );
 };
 
-export default Header;
+export default AdminHeader;

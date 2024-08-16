@@ -15,6 +15,7 @@ const Home = () => {
   return (
     <>
       <Header />
+      <div className="main_home">
       <h2 className="text-center  fw-bold">Academic Qualifications</h2>
       <div className="container px-5 qualification_forms">
         <div className="row">
@@ -86,6 +87,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      </div>
+     
     </>
   );
 };

@@ -4,7 +4,7 @@
 .main {
     height: 100vh;
     font-family: 'Poppins', sans-serif;
-    background: url("../../../public/images/bg2.jpg");
+    background: url("../../../public/images/bg2.jpg") ;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

@@ -35,23 +35,36 @@ const Login = () => {
 
     try {
       setLoading(true);
-      const user = await signInWithEmailAndPassword(
+
+      const userCredential = await signInWithEmailAndPassword(
         auth,
         formData.email,
         formData.password
       );
-      console.log("user sign in ", user);
-      toast.success("welcome back..");
-      setTimeout(() => {
-        navigate("/Welcome");
-      }, 1000);
+
+      const user = userCredential.user;
+      console.log("User signed in:", user);
+
+      // Check if the signed-in user is the admin
+      if (formData.email === "admin@gmail.com") {
+        toast.success("Welcome Admin!");
+        setTimeout(() => {
+          navigate("/admin-dashboard"); // Navigate to admin dashboard
+        }, 1000);
+      } else {
+        toast.success("Welcome back!");
+        setTimeout(() => {
+          navigate("/Welcome"); // Navigate to regular welcome page
+        }, 1000);
+      }
     } catch (error) {
-      console.log("failed to login ", error);
-      toast.error("invalid credentials ");
+      console.log("Failed to login:", error);
+      toast.error("Invalid credentials");
     } finally {
       setLoading(false);
     }
   };
+
 
   const handleGoogleSignup = async () => {
     try {

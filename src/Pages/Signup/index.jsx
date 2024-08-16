@@ -146,7 +146,6 @@ const Signup = () => {
               <input
                 type="text"
                 placeholder="Refferal code (optional)"
-                required
                 name="rfrCode"
                 value={formData.rfrCode}
                 onChange={handleChange}
