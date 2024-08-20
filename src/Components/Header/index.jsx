@@ -39,7 +39,7 @@ const Header = () => {
         <div className="nav-wrapper d-flex align-items-center justify-content-between h-100">
           <div className="logo">
             <a href="/home">
-              <i className="fas fa-chess-knight" /> Logo
+              <i className="fas fa-chess-knight" /> Green File
             </a>
           </div>
           <ul id="menu" className={menuOpen ? "show" : ""}>

@@ -39,7 +39,7 @@ const AdminHeader = () => {
         <div className="nav-wrapper d-flex align-items-center justify-content-between h-100 w-100">
           <div className="logo">
             <a href="/admin-dashboard">
-              <i className="fas fa-chess-knight" /> Logo
+              <i className="fas fa-chess-knight" /> Green File
             </a>
           </div>
           <ul id="menu" className={menuOpen ? "show" : ""}>
@@ -48,6 +48,8 @@ const AdminHeader = () => {
           <li><a href="/admin-academic-details">Academic</a></li>
           <li><a href="/admin-curriculum-details">Curriculum</a></li>
           <li><a href="/admin-personal-details">Personal</a></li>
+          <li><a href="/admin-chat-dashboard">Chats</a></li>
+
             {user ? (
               <li className="nav-item dropdown">
                 <a

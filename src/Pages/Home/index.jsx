@@ -4,6 +4,9 @@ import AcademicQualifications from "../../Components/AcademicQualifications";
 import Curriculums from "../../Components/Curriculums";
 import UserDetails from "../../Components/UserDetails";
 import "./home.css"
+import Footer from "../../Components/Footer";
+import ChatSupport from "../../Components/ChatSupport";
+import ChatIcon from "../../Components/ChatIcon";
 
 const Home = () => {
   const [activeSection, setActiveSection] = useState("academic");
@@ -88,7 +91,8 @@ const Home = () => {
         </div>
       </div>
       </div>
-     
+     <ChatIcon/>
+      <Footer/>
     </>
   );
 };

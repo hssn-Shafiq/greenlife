@@ -8,6 +8,7 @@ import Dashboard from "./Pages/Admin/Dashboard";
 import RegisteredUsers from "./Pages/Admin/RegisteredUsers";
 import AcademicDetails from "./Pages/Admin/AcademicDetails";
 import CurriculumDetails from "./Pages/Admin/CurriculumDetails";
+import AdminChatDashboard from "./Pages/Admin/AdminChatDashboard";
 import PersonalDetails from "./Pages/Admin/PersonalDetails";
 import LoadingSimulation from "./Components/LoadingSimulation"; // Your loader component
 
@@ -39,6 +40,7 @@ const WebRoutes = () => {
         <Route path="admin-academic-details" element={<AcademicDetails />} />
         <Route path="admin-curriculum-details" element={<CurriculumDetails />} />
         <Route path="admin-personal-details" element={<PersonalDetails />} />
+        <Route path="admin-chat-dashboard" element={<AdminChatDashboard/>} />
       </Routes>
     </>
   );
