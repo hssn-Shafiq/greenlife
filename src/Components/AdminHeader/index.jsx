@@ -48,7 +48,7 @@ const AdminHeader = () => {
           <li><a href="/admin-academic-details">Academic</a></li>
           <li><a href="/admin-curriculum-details">Curriculum</a></li>
           <li><a href="/admin-personal-details">Personal</a></li>
-          <li><a href="/admin-chat-dashboard">Chats</a></li>
+          {/* <li><a href="/admin-chat-dashboard">Chats</a></li> */}
 
             {user ? (
               <li className="nav-item dropdown">
