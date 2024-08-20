@@ -91,7 +91,7 @@ const Home = () => {
         </div>
       </div>
       </div>
-     <ChatIcon/>
+     {/* <ChatIcon/> */}
       <Footer/>
     </>
   );
