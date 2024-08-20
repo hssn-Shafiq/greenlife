@@ -16,7 +16,7 @@ const UserDetails = () => {
       if (currentUser) {
         setUser(currentUser);
       } else {
-        navigate('/login');
+        navigate('/');
       }
     });
 

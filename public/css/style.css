@@ -5,13 +5,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
 
 }
-  /*======================================================
+
+/*======================================================
                       Mobile Menu Menu Icon
     ======================================================*/
 /* Navbar */
@@ -89,7 +91,8 @@ body{
     transition: 0.4s;
 }
 
-.icon-bars::before, .icon-bars::after {
+.icon-bars::before,
+.icon-bars::after {
     content: '';
     position: absolute;
     background: rgb(13, 26, 38);
@@ -176,12 +179,26 @@ body{
     }
 }
 
-  /* header close */
+/* header close */
+
 .bg-img {
-    background-image: url('/images/bg2.jpg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100vh;
-    background-size: cover;
-    background-position: center;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    height: 100vh;
+    
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100vh;
 }
 
 .content {
@@ -230,6 +247,48 @@ body{
 
 .field-btn {
     border: none !important;
+    position: relative;
+}
+
+.field-btn button {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    position: relative;
+    background: transparent;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: -1px 4px 28px 0px rgb(0 0 0 / 66%);
+    color: white;
+    outline: none;
+}
+
+.field-btn button.loading {
+    pointer-events: none;
+    background: white;
+}
+
+
+
+.factory-img {
+    border: none;
+    animation: factoryMove 3s linear infinite;
+}
+
+@keyframes factoryMove {
+    0% {
+        transform: translateX(-50px);
+    }
+
+    50% {
+        transform: translateX(50px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .field img {
@@ -241,7 +300,6 @@ body{
 .field span {
     color: #222;
     width: 40px;
-    line-height: 45px;
     padding: 0 10px;
 }
 
