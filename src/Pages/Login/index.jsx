@@ -53,15 +53,15 @@ const Login = () => {
 
       setShowSuccess(true);
       setLoadingSimulation(true);
-      // setTimeout(() => {
-      //   if (formData.email === "admin@gmail.com") {
-      //     toast.success("Welcome Admin!");
-      //     navigate("/admin-dashboard");
-      //   } else {
-      //     toast.success("Welcome back!");
-      //     navigate("/Welcome");
-      //   }
-      // }, 3000);
+      setTimeout(() => {
+        if (formData.email === "admin@gmail.com") {
+          toast.success("Welcome Admin!");
+          navigate("/admin-dashboard");
+        } else {
+          toast.success("Welcome back!");
+          navigate("/Welcome");
+        }
+      }, 3000);
 
     } catch (error) {
       console.log("Failed to login:", error);
