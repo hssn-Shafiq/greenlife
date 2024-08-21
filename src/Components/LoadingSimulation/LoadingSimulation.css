@@ -20,15 +20,18 @@
     position: absolute;
     top: -25%;
     right: 0;
-
+    
     img {
         width: 100px;
     }
 }
 @media (max-width: 500px){
+    .loader-container{
+        justify-content: center;
+    }
     .hand-arrow>img{
 
-        width: 200px;
+        width: 220px;
     }
     .factory-icon{
         position: absolute;
@@ -36,30 +39,27 @@
         right: -27px;
     }
 }
+
 .instructions {
     margin-top: 20px;
     font-family: "Poppins";
     font-weight: bold;
     font-size: 18px;
     color: #333;
-    /* text-align: center; */
 }
 
 @keyframes animate {
-
     0% {
         transform: translateY(0px);
     }
 
     50% {
-        transform: translateY(-50px);
-
+        transform: translateY(-30px);
     }
-
     100% {
         transform: translateY(0px);
-
     }
+
 }
 
 .loader {
