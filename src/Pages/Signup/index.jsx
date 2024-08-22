@@ -61,7 +61,7 @@ const Signup = () => {
 
         setTimeout(() => {
           navigate("/");
-        }, 1000);
+        }, 2000);
       }
     } catch (error) {
       console.log("Failed to sign up:", error.message);

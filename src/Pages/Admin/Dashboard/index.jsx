@@ -211,9 +211,9 @@ const Dashboard = () => {
             <option value="academic_qualifications">Academic Details</option>
           </select>
         </div>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-12 col-md-6">
+        <div className="container-fluid p-0">
+          <div className="row flex-wrap p-0 m-0">
+            <div className="col-12 col-md-6 p-0">
               <div className="chart-container">
                 <h3>
                   {selectedCollection === "all"
@@ -239,7 +239,7 @@ const Dashboard = () => {
               </div>
             </div>
 
-            <div className="col-12 col-md-6">
+            <div className="col-12 col-md-6 p-0">
               <div className="chart-container">
                 <h3>Total Registered Users Over Time</h3>
                 <ResponsiveContainer width="100%" height={400}>
