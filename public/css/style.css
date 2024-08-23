@@ -197,7 +197,7 @@ body {
 }
 
 .carousel-item img {
-    object-fit: cover;
+    /* object-fit: cover; */
     height: 100vh;
 }
 

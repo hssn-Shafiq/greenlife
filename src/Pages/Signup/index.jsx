@@ -108,21 +108,21 @@ const Signup = () => {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
-              src="/images/bg2.jpg"
+              src="/images/slider1.jpg"
               className="d-block w-100"
               alt="Background 1"
             />
           </div>
           <div className="carousel-item">
             <img
-              src="/images/bg3.jpg"
+              src="/images/slider2.jpg"
               className="d-block w-100"
               alt="Background 2"
             />
           </div>
           <div className="carousel-item">
             <img
-              src="/images/bg.jpg"
+              src="/images/slider3.jpg"
               className="d-block w-100"
               alt="Background 3"
             />

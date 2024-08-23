@@ -32,8 +32,8 @@ const Login = () => {
     }));
   };
 
-  if(loadingSimulation){
-    return <LoadingSimulation/>
+  if (loadingSimulation) {
+    return <LoadingSimulation />;
   }
 
   const handleSubmit = async (e) => {
@@ -62,7 +62,6 @@ const Login = () => {
           navigate("/Welcome");
         }
       }, 3000);
-
     } catch (error) {
       console.log("Failed to login:", error);
       toast.error("Invalid credentials");
@@ -99,18 +98,50 @@ const Login = () => {
   return (
     <>
       <ToastContainer />
-      <div id="backgroundCarousel" className="carousel slide bg-img" data-bs-ride="carousel">
+      <div
+        id="backgroundCarousel"
+        className="carousel slide bg-img"
+        data-bs-ride="carousel"
+      >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src="/images/bg2.jpg" className="d-block w-100" alt="Background 1" />
+            <img
+              src="/images/slider1.jpg"
+              className="d-block w-100"
+              alt="Background 1"
+            />
           </div>
           <div className="carousel-item">
-            <img src="/images/bg3.jpg" className="d-block w-100" alt="Background 2" />
+            <img
+              src="/images/slider2.jpg"
+              className="d-block w-100"
+              alt="Background 2"
+            />
           </div>
           <div className="carousel-item">
-            <img src="/images/bg.jpg" className="d-block w-100" alt="Background 3" />
+            <img
+              src="/images/slider3.jpg"
+              className="d-block w-100"
+              alt="Background 3"
+            />
           </div>
         </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
       </div>
       <div className="content">
         <h2>Kericho,</h2>
@@ -138,23 +169,24 @@ const Login = () => {
             />
           </div>
           <div className="field field-btn">
-            <button type="submit" className={loading ? "loading" : "btn btn-light w-100"}>
+            <button
+              type="submit"
+              className={loading ? "loading" : "btn btn-light w-100"}
+            >
               {showSuccess ? (
                 <>
                   <span className="success-tick text-success">✔</span>
                 </>
+              ) : loading ? (
+                <>
+                  <img
+                    src="/images/icons/factory.png"
+                    alt="Factory"
+                    className="factory-img"
+                  />
+                </>
               ) : (
-                loading ? (
-                  <>
-                    <img
-                      src="/images/icons/factory.png"
-                      alt="Factory"
-                      className="factory-img"
-                    />
-                  </>
-                ) : (
-                  "Login"
-                )
+                "Login"
               )}
             </button>
           </div>
