@@ -11,6 +11,7 @@ import CurriculumDetails from "./Pages/Admin/CurriculumDetails";
 import AdminChatDashboard from "./Pages/Admin/AdminChatDashboard";
 import PersonalDetails from "./Pages/Admin/PersonalDetails";
 import LoadingSimulation from "./Components/LoadingSimulation"; // Your loader component
+import ChatRoom from "./Pages/ChatRoom";
 
 const WebRoutes = () => {
   const location = useLocation(); // Hook to get the current location
@@ -36,6 +37,7 @@ const WebRoutes = () => {
         <Route path="/Welcome" element={<WelcomePage />} />
         <Route path="/Home" element={<Home />} />
         <Route path="admin-dashboard" element={<Dashboard />} />
+        <Route path="chat-room" element={<ChatRoom />} />
         <Route path="admin-user-details" element={<RegisteredUsers />} />
         <Route path="admin-academic-details" element={<AcademicDetails />} />
         <Route path="admin-curriculum-details" element={<CurriculumDetails />} />

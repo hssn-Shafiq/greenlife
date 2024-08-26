@@ -1,20 +1,17 @@
-import React, { useState } from 'react';
-import ChatSupportModal from '../ChatSupport';
-
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ChatIcon = () => {
-  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleNavigate = () => {
+    navigate('/chat-room'); // Replace with your desired route
+  };
 
   return (
-    <>
-      <div style={styles.chatIcon} onClick={handleOpen}>
-        💬
-      </div>
-      {open && <ChatSupportModal onClose={handleClose} />}
-    </>
+    <div style={styles.chatIcon} onClick={handleNavigate}>
+      💬
+    </div>
   );
 };
 
