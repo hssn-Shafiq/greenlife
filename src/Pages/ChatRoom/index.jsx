@@ -23,7 +23,7 @@ const ChatRoom = () => {
             <div className="chat__conversation-board__message__context">
               <div className="chat__conversation-board__message__bubble d-flex flex-column">
                 {" "}
-                <span className="user_name">Monika Figi (Ward Name)</span>
+                <span className="user_name">Kevin - Kisiara </span>
                 <span>
                   Somewhere stored deep, deep in my memory banks is the phrase
                   "It really whips the llama's ass".
@@ -87,7 +87,7 @@ const ChatRoom = () => {
             <div className="chat__conversation-board__message__context">
               <div className="chat__conversation-board__message__bubble d-flex flex-column">
                 {" "}
-                <span className="user_name">Monika Figi (Ward Name)</span>
+                <span className="user_name">Bright - Chemosot</span>
                 <span>Think the guy that did the voice has a Twitter?</span>
               </div>
             </div>
@@ -148,7 +148,7 @@ const ChatRoom = () => {
             <div className="chat__conversation-board__message__context">
               <div className="chat__conversation-board__message__bubble d-flex flex-column">
                 {" "}
-                <span className="user_name">Monika Figi (Ward Name)</span>
+                <span className="user_name">Kevin - Kisiara </span>
 
                 <span>WE MUST FIND HIM!!</span>
               </div>
@@ -275,7 +275,7 @@ const ChatRoom = () => {
             <div className="chat__conversation-board__message__context">
               <div className="chat__conversation-board__message__bubble d-flex flex-column">
                 {" "}
-                <span className="user_name">Monika Figi (Ward Name)</span>
+                <span className="user_name">Monika Figi - Ward Name</span>
 
                 <span>WE MUST FIND HIM!!</span>
               </div>
