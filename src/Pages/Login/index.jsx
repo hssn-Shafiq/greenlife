@@ -144,7 +144,7 @@ const Login = () => {
         </button>
       </div>
       <div className="content">
-        <h2>Kericho,</h2>
+        <h2>Bureti,</h2>
         <p>Glad to see you!</p>
         <form onSubmit={handleSubmit}>
           <div className="field">

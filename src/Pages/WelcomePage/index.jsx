@@ -11,7 +11,7 @@ const WelcomePage = () => {
           <div className="row align-items-center flex-wrap gap-md-0 gap-5 justify-content-center justify-content-md-start">
             <div className="col-md-6 col-12">
               <div className="welcome-container">
-                <h1>Welcome to Greenlife Kericho</h1>
+                <h1>Welcome to Greenlife Bureti</h1>
                 <p>Your journey to tranquility begins here</p>
                 <Link to="/home"><button className="welcome-button">Get Started</button></Link>
               </div>

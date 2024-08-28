@@ -18,7 +18,7 @@ const ChatRoom = () => {
     // Check for user authentication
     const unsubscribeAuth = auth.onAuthStateChanged(async (authUser) => {
       if (!authUser) {
-        navigate("/"); // Redirect to login if user is not authenticated
+        navigate("/"); 
         return;
       }
 
@@ -76,6 +76,14 @@ const ChatRoom = () => {
     }
   };
 
+  // Handle key press for Enter key
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault(); // Prevent default action of Enter key (e.g., form submission)
+      sendMessage();
+    }
+  };
+
   // Helper function to generate avatar from the first letter of the username
   const getAvatar = (name) => {
     return name ? name.charAt(0).toUpperCase() : <i className="fa-solid fa-user" />;
@@ -113,6 +121,7 @@ const ChatRoom = () => {
               placeholder="Type a message..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
+              onKeyPress={handleKeyPress} // Listen for Enter key press
             />
             <button
               className="chat__conversation-panel__button panel-item btn-icon send-message-button"
