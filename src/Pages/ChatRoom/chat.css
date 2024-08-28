@@ -95,8 +95,8 @@
     margin: 0 1.2em 0 0;
   }
   #chat .chat__conversation-board__message__person__avatar {
-    height: 35px;
-    width: 35px;
+    height: 24px;
+    width: 24px;
     overflow: hidden;
     border-radius: 50%;
     -webkit-user-select: none;
@@ -170,7 +170,7 @@
   }
   #chat .chat__conversation-board__message__bubble .user_name{
     background: transparent;
-    /* color: white; */
+    font-size: 12px;
     padding: 0px;
     padding-bottom: 5px;
 
