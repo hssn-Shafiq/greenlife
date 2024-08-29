@@ -15,6 +15,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import ".././admin.css";
+import ChatIcon from "../../../Components/ChatIcon";
 
 const Dashboard = () => {
   const [selectedCollection, setSelectedCollection] = useState("all");
@@ -261,7 +262,8 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-      </div>
+    </div>
+      <ChatIcon/>
     </>
   );
 };

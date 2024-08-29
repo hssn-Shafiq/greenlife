@@ -57,15 +57,20 @@
     height: calc(100vh - 55px - 2em - 1px * 2 - .5em - 3em);
     overflow: auto;
   }
+  #chat .chat__conversation-board__message-container.reversed .chat__conversation-board__message__bubble .user_name{
+    color: #fff;
+  }
   #chat .chat__conversation-board__message-container.reversed {
     flex-direction: row-reverse;
+    padding-right: 1rem;
   }
   #chat .chat__conversation-board__message-container.reversed .chat__conversation-board__message__bubble {
     position: relative;
   }
   #chat .chat__conversation-board__message-container.reversed .chat__conversation-board__message__bubble span:not(:last-child) {
-    margin: 0 0 2em 0;
+    /* margin: 0 0 2em 0; */
   }
+
   #chat .chat__conversation-board__message-container.reversed .chat__conversation-board__message__person {
     margin: 0 0 0 1.2em;
   }

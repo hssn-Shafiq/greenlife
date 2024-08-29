@@ -92,6 +92,7 @@ const ChatRoom = () => {
   return (
     <div className="main-chat">
       <div className="--dark-theme" id="chat">
+      <h2 className="text-light text-center fw-bold "> Welcome to ChatRoom</h2>
         <div className="chat__conversation-board">
           {messages.map(({ id, data }) => (
             <div
