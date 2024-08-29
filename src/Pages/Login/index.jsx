@@ -77,7 +77,7 @@ const Login = () => {
       const user = result.user;
 
       if (user) {
-        await addDoc(collection(db, "googleUsers"), {
+        await addDoc(collection(db, "users"), {
           uid: user.uid,
           name: user.displayName,
           email: user.email,

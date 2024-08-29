@@ -65,9 +65,9 @@ const ChatRoom = () => {
   const sendMessage = async () => {
     if (input.trim()) {
       await addDoc(collection(db, "chats"), {
-        userId: user.uid,
-        name: userName,
-        refcode: refCode,
+        userId: user.uid || "",
+        name: userName || "",
+        refcode: refCode || "",
         message: input,
         timestamp: serverTimestamp(),
         isAdmin: isAdmin, // Distinguish if the message is from admin
@@ -94,7 +94,7 @@ const ChatRoom = () => {
       <div className="--dark-theme" id="chat">
       <h2 className="text-light text-center fw-bold "> Welcome to ChatRoom</h2>
         <div className="chat__conversation-board">
-          {messages.map(({ id, data }) => (
+        {messages.map(({ id, data }) => (
             <div
               key={id}
               className={`chat__conversation-board__message-container ${data.isAdmin ? "reversed" : ""}`}

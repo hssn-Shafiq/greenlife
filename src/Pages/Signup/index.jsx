@@ -81,7 +81,7 @@ const Signup = () => {
 
       if (user) {
         // Add user data to a separate Firestore collection
-        await addDoc(collection(db, "googleUsers"), {
+        await addDoc(collection(db, "users"), {
           uid: user.uid,
           name: user.displayName,
           email: user.email,
