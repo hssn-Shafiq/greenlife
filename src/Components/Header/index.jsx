@@ -39,8 +39,9 @@ const Header = () => {
       <nav id="navbar">
         <div className="nav-wrapper d-flex align-items-center justify-content-between h-100">
           <div className="logo">
-            <a href="/home">
-             <img src="/images/logo.jpg" className=" rounded-2 shadow" width={60} alt="" />
+            <a href="/home" className="text-decoration-none">
+             <img src="/images/logo.jpg" className=" rounded-pill shadow" width={60} alt="" /> <strong>
+             Bureti</strong>
             </a>
           </div>
           <ul id="menu" className={menuOpen ? "show" : ""}>

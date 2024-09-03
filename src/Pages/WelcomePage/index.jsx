@@ -13,7 +13,7 @@ const WelcomePage = () => {
               <div className="welcome-container">
                 <h1>Welcome to Bureti Constituency</h1>
                 <p>Your journey to tranquility begins here</p>
-                <Link to="/home"><button className="welcome-button">Fix Things</button></Link>
+                <Link to="/home"><button className="welcome-button"> Fix Things <img src="/images/touch.png" width={40} className="object-fit-fill" height={30} alt="" /> </button></Link>
               </div>
               <div className="leaf-animation" />
             </div>
