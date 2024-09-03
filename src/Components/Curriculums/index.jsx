@@ -78,6 +78,8 @@ const Curriculums = () => {
           />
         </div>
         <button type="submit" className="btn btn-primary">Save</button>
+        <a href="https://www.crazygames.com/game/hexa-sort" target='_blank'><button type='button' className='btn btn-dark float-end have-fun-btn'>Have Some Fun 😊</button>
+        </a>
       </form>
     </>
   );
