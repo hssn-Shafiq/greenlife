@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../firebase";
+// import logo from "../../images/logo.jpg"
 
 const Header = () => {
   const [user, setUser] = useState(null);
@@ -39,7 +40,7 @@ const Header = () => {
         <div className="nav-wrapper d-flex align-items-center justify-content-between h-100">
           <div className="logo">
             <a href="/home">
-              <i className="fas fa-chess-knight" /> Green File
+             <img src="/images/logo.jpg" className=" rounded-2 shadow" width={60} alt="" />
             </a>
           </div>
           <ul id="menu" className={menuOpen ? "show" : ""}>

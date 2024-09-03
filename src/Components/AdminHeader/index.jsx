@@ -39,7 +39,7 @@ const AdminHeader = () => {
         <div className="nav-wrapper d-flex align-items-center justify-content-between h-100 w-100">
           <div className="logo">
             <a href="/admin-dashboard">
-              <i className="fas fa-chess-knight" /> Green File
+            <img src="/images/logo.jpg" className=" rounded-2 shadow" width={60} alt="" />
             </a>
           </div>
           <ul id="menu" className={menuOpen ? "show" : ""}>

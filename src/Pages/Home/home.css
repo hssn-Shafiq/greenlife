@@ -61,7 +61,10 @@
     transition: all 0.5s ease;
     cursor: pointer;
 }
+.qualification_forms .have-fun-btn{
+    background: linear-gradient(45deg, #015fc4, #292929);
 
+}
 /* Active Button Background and Arrow */
 .qualification_forms .active-btn {
     background: linear-gradient(45deg, #28a745, #a7ff83);
