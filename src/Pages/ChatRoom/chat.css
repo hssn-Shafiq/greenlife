@@ -8,9 +8,11 @@
     --chat-text-color: #a3a3a3;
     --chat-options-svg: #a3a3a3;
   }
-  
+
   .main-chat {
     background: url("/public/images/bg2.jpg");
+    scroll-behavior: smooth;
+    transition: all .3s ease;
     background-size: cover;
     background-position: center;
     width: 100%;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { auth, db } from "../../firebase"; // Import auth and db services from firebase.js
 import { collection, query, where, getDocs, onSnapshot, addDoc, serverTimestamp, orderBy } from "firebase/firestore"; // Firestore methods
 import { useNavigate } from "react-router-dom"; // For navigation
@@ -11,7 +11,9 @@ const ChatRoom = () => {
   const [userName, setUserName] = useState(""); // Store user's name
   const [refCode, setRefCode] = useState(""); // Store user's referral code
   const [isAdmin, setIsAdmin] = useState(false); // Check if the user is an admin
+  const [showScrollToBottom, setShowScrollToBottom] = useState(false); // Control visibility of scroll icon
 
+  const chatRef = useRef(null); // Ref for chat container
   const navigate = useNavigate(); // Initialize history for navigation
 
   useEffect(() => {
@@ -53,6 +55,7 @@ const ChatRoom = () => {
     const chatQuery = query(collection(db, "chats"), orderBy("timestamp", "asc"));
     const unsubscribeChats = onSnapshot(chatQuery, (snapshot) => {
       setMessages(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })));
+      scrollToBottom(); // Scroll to the bottom on new messages
     });
 
     // Cleanup subscriptions on component unmount
@@ -61,6 +64,22 @@ const ChatRoom = () => {
       unsubscribeChats();
     };
   }, [navigate]);
+
+  const scrollToBottom = () => {
+    if (chatRef.current) {
+      chatRef.current.scrollTop = chatRef.current.scrollHeight;
+    }
+  };
+
+  const handleScroll = () => {
+    if (chatRef.current) {
+      // Check if the user is near the bottom (small threshold for smoothness)
+      const threshold = 50; // px from the bottom
+      const isAtBottom =
+        chatRef.current.scrollHeight - chatRef.current.scrollTop - chatRef.current.clientHeight <= threshold;
+      setShowScrollToBottom(!isAtBottom); // Show/hide the button based on scroll position
+    }
+  };
 
   const sendMessage = async () => {
     if (input.trim()) {
@@ -73,6 +92,7 @@ const ChatRoom = () => {
         isAdmin: isAdmin, // Distinguish if the message is from admin
       });
       setInput(""); // Clear the input after sending the message
+      scrollToBottom(); // Scroll to the bottom after sending a message
     }
   };
 
@@ -92,9 +112,9 @@ const ChatRoom = () => {
   return (
     <div className="main-chat">
       <div className="--dark-theme" id="chat">
-      <h2 className="text-light text-center fw-bold "> Welcome to ChatRoom</h2>
-        <div className="chat__conversation-board">
-        {messages.map(({ id, data }) => (
+        <h2 className="text-light text-center fw-bold">Welcome to ChatRoom</h2>
+        <div className="chat__conversation-board" ref={chatRef} onScroll={handleScroll}>
+          {messages.map(({ id, data }) => (
             <div
               key={id}
               className={`chat__conversation-board__message-container ${data.isAdmin ? "reversed" : ""}`}
@@ -107,7 +127,7 @@ const ChatRoom = () => {
               <div className="chat__conversation-board__message__context">
                 <div className="chat__conversation-board__message__bubble d-flex flex-column">
                   <span className="user_name">
-                  {data.name || ""} - {data.refcode} 
+                    {data.name || ""} - {data.refcode}
                   </span>
                   <span>{data.message}</span>
                 </div>
@@ -146,6 +166,31 @@ const ChatRoom = () => {
             </button>
           </div>
         </div>
+        {showScrollToBottom && (
+          <button
+            className="scroll-to-bottom-btn"
+            onClick={scrollToBottom}
+            style={{
+              position: "fixed",
+              bottom: "80px",
+              right: "40px",
+              backgroundColor: "rgb(0 255 43 / 19%)",
+              zIndex:"1000",
+              color: "#fff",
+              borderRadius: "50%",
+              width: "50px",
+              height: "50px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              border: "none",
+              cursor: "pointer",
+              boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
+            }}
+          >
+            <i className="fa fa-arrow-down" aria-hidden="true"></i>
+          </button>
+        )}
       </div>
     </div>
   );
