@@ -112,7 +112,9 @@ const ChatRoom = () => {
   return (
     <div className="main-chat">
       <div className="--dark-theme" id="chat">
-        <h2 className="text-light text-center fw-bold">Welcome to ChatRoom</h2>
+        <h2 className="text-light  text-center fw-bold"><a href="/home" className="d-none d-md-block">
+    <i className="fa-solid fa-arrow-left text-light float-start"></i>
+        </a>Welcome to ChatRoom</h2>
         <div className="chat__conversation-board" ref={chatRef} onScroll={handleScroll}>
           {messages.map(({ id, data }) => (
             <div
