@@ -1,0 +1,32 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .success-tick {
+    font-size: 50px;
+    color: green;
+  }
+  
+  .popup-content p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
